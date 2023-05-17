@@ -1,0 +1,15 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table, th, tr, td{
+    border: #000 solid 1px;
+    border-collapse: collapse;
+}
+.linhacentralizada, .colunacentralizda{
+    text-align: center;
+}
+
+.table6,.tr6,.td6,.th6{
+    width: 500px;
+    height: 70px;
+}

@@ -1,0 +1,16 @@
+table, th, tr, td{
+    width: 500px;
+    height: 70px;
+    border: #000 solid 1px;
+    border-collapse: collapse;
+}
+
+.altcima{
+    vertical-align: top;
+}
+.altmeio{
+    vertical-align: middle;
+}
+.altbaixo{
+    vertical-align: bottom;
+}
