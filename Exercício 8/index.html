@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com a página</title>
+</head>
+<body>
+    <h1>Mudando a cor do body</h1>
+    
+    <p>
+        <label for="cor">Selecione a cor de fundo:</label>
+        <input type="color" id="cor" value="#000000">
+    </p>
+    
+    <h1>Tarefas a serem feitas</h1>
+    <p>
+        <input type="checkbox" name="tarefa1" id="tarefa1">
+        <label for="tarefa1">Mude a cor para azul.</label>
+    </p>
+    <p>
+        <input type="checkbox" name="tarefa2" id="tarefa2">
+        <label for="tarefa2">Agora mude a cor para púpura.</label>
+    </p>
+    <p>
+        <input type="checkbox" name="tarefa2" id="tarefa3">
+        <label for="tarefa3">Por último mude para a cor marrom.</label>
+    </p>
+    <script>
+        const color_input = document.getElementById('cor');
+        const body = document.body;
+        const taskA = document.getElementById('tarefa1');
+        const taskB = document.getElementById('tarefa2');
+        const taskC = document.getElementById('tarefa3');
+        
+        
+        color_input.addEventListener('input', function() {
+            const cor_selecionada = color_input.value;
+            body.style.background = cor_selecionada;
+            body.style.color = getContrastColor(cor_selecionada);
+
+            taskA.checked = cor_taskA(cor_selecionada);
+            taskB.checked = cor_taskB(cor_selecionada);
+            taskC.checked = cor_taskC(cor_selecionada);
+        });
+
+        
+        function getContrastColor(color) {
+            const hexcolor = color.replace('#', '');
+            const red = parseInt(hexcolor.substr(0, 2), 16);
+            const green = parseInt(hexcolor.substr(2, 2), 16);
+            const blue = parseInt(hexcolor.substr(4, 2), 16);
+            const brightness = (red * 299 + green * 587 + blue * 114) / 1000;
+            return brightness > 128 ? '#000000' : '#ffffff';
+        }
+
+        function cor_taskA(color) {
+            return color === '#0000ff';
+        }
+
+        function cor_taskB(color) {
+            return color === '#800080';
+        }
+        
+        function cor_taskC(color) {
+            return color === '#964b00';
+        }
+    </script>
+</body>
+</html>
