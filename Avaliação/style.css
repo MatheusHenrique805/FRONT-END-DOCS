@@ -1,24 +1,63 @@
-div{
-background-color: white;
-   background-image: url(fundo-f1.jpg);
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-position: center;
-}
-header{
-    background-image: url(titulo-f1.jpg);
-    height: 100px;
-}
-h4{
-    background-image: url(bandeira1.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: right;
-    padding: 1.em;
+body{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container{
-    width: 800px;
-    height: 800px;
+    background-color: white;
+    background-image: url(imagens/fundo-f1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     margin: auto;
-    color: aliceblue;
+    max-width: 800px;
+    max-height: fit-content;
+    padding: 20px;
 }
+header{
+    background-image: url(imagens/titulo-f1.jpg);
+    background-repeat: no-repeat;
+    max-width: 800px;
+    height: 120px;
+}
+main, footer{
+    width: 800px;
+    height: fit-content;
+}
+
+
+ul{
+    list-style-type: none;
+}
+a:link{
+    color:#030303;
+    text-decoration:none;
+}
+a:visited{
+    color:#000000;
+    text-decoration:none;
+}
+a:hover{
+    color:rgb(212, 195, 35);
+    text-decoration: underline;
+}
+a:active{
+    color:#000000;
+    text-decoration:none;
+}
+h4{
+    background-image: url(imagens/bandeira1.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 800px;
+    height: 20px;
+    border-left: 5px solid gray;
+    border-bottom: 2px solid gray;
+    padding: 4px;
+    
+}
+p{
+    text-align: justify;
+    text-indent: 10%;
+    line-height: 1.5em; 
+}
+
